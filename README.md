@@ -20,7 +20,7 @@ Note:
 The requirements does not require search feature (6). However, given very long URL summary table, user cannot search for shortened URL.
 Hence, I added search feature allowing users to enter shortURL key (the part after domain) and get the requesting record in the table.
 
-##Implementation
+## Implementation
 This app consists of frontend and backend which are in different code bases and highly recommend to deploy them in different servers/environments for security, scalability.
 ### Backend:
 #### Features:
