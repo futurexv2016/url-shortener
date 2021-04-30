@@ -18,7 +18,7 @@ b. Get redirected to original URL
 
 Note:
 The requirements does not require search feature (6). However, given very long URL summary table, user cannot search for shortened URL.
-Hence, I added search feature allowing users to enter shortURL key (the part after domain) and get the requesting record in the table.
+Hence, I added search feature allowing users to enter shortURL key (the part after domain) and get the requested record in the table.
 
 ## Implementation
 This app consists of frontend and backend which are in different code bases and highly recommend to deploy them in different servers/environments for security, scalability.
@@ -26,10 +26,10 @@ This app consists of frontend and backend which are in different code bases and 
 #### Features:
 - Restful API is implemented in API first approach [https://swagger.io/resources/articles/adopting-an-api-first-approach/](https://swagger.io/resources/articles/adopting-an-api-first-approach/)
 - For each request comes, interceptors are implemented to log request and response for debugging, tracing purposes
-- Spring Sleuth is used to assign every step of the request an ID so that we can trace all steps of a request in different layers via ```grep``` command in log. 
+- Spring Sleuth is used to assign every step of the request an ID so that we can trace all steps of a request in different layers via ```grep id``` command in log. 
 - Caffeine cache is implemented for URL read-only operations to improve performance. It is now memory cache. However, if necessary can be replaced by different cache such as AWS elastic cache later
 - API is described via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-- App is using Jacoco to create test coverage report
+- Unit test is written and Jacoco is used to measure test coverage report
 
 #### Deployment environment
 - Docker-Compose: 1.23.1
@@ -46,8 +46,8 @@ Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-u
 
 ### Frontend:
 #### Features:
-- Search feature, outside the requirements, is implemented to search for short URL  
-- For simplicity, FE is implemented by React Hook. In case of more sophisticated app, Redux Saga can be used.
+- Search feature is implemented to search for short URL  
+- For simplicity, Frontend is implemented by React Hook. In case of more sophisticated app, Redux Saga can also be used.
 - For time constraint, unit test in Frontend is ignored 
 #### Deployment environment
 - Npm: 7.5.4
