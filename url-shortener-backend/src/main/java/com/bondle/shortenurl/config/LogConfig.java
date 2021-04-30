@@ -1,12 +1,12 @@
 package com.bondle.shortenurl.config;
 
-import com.bondle.shortenurl.api.LoggingFilter;
+import com.bondle.shortenurl.api.APILoggingFilter;
 import org.springframework.context.annotation.*;
 
 @Configuration
 public class LogConfig {
     @Bean
-    public LoggingFilter loggingFilter() {
-        return new LoggingFilter();
+    public APILoggingFilter loggingFilter() {
+        return new APILoggingFilter();
     }
 }
