@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shorten-url-frontend:latest
+    ports:
+      - 80:80
+

@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  backend:
+    build:
+      context: ./url-shortener-backend
+    image: shorten-url-backend:latest
+    ports:
+      - 8080:8080
+
+  frontend:
+    build:
+      context: ./url-shortener-frontend
+    image: shorten-url-frontent:latest
+    ports:
+      - 80:80
+

@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Form {
+  margin: 1em;
+  text-align: right;
+  /*background-color: #0b1736;*/
+}
+
+.url-input {
+  margin-left: 10em;
+}
+
+.Error-Message {
+  color: red;
+}
+
+.Button {
+  text-align: left;
+}
