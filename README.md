@@ -26,7 +26,7 @@ This app consists of frontend and backend which are in different code bases and 
 #### Features:
 - Restful API is implemented in API first approach [https://swagger.io/resources/articles/adopting-an-api-first-approach/](https://swagger.io/resources/articles/adopting-an-api-first-approach/)
 - For each request comes, interceptors are implemented to log request and response for debugging, tracing purposes
-- Spring Sleuth is used to assign each step of the request an ID so that we can trace all steps via ```grep``` command in log. 
+- Spring Sleuth is used to assign every step of the request an ID so that we can trace all steps of a request in different layers via ```grep``` command in log. 
 - Caffeine cache is implemented for URL read-only operations to improve performance. It is now memory cache. However, if necessary can be replaced by different cache such as AWS elastic cache later
 - API is described via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - App is using Jacoco to create test coverage report
