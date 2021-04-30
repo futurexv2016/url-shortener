@@ -99,7 +99,7 @@ export const SummaryUrlTable = () => {
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>Shortened Url</StyledTableCell>
-                            <StyledTableCell>Origin Url</StyledTableCell>
+                            <StyledTableCell>Original Url</StyledTableCell>
                             <StyledTableCell>Created Time</StyledTableCell>
                         </TableRow>
                     </TableHead>
