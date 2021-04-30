@@ -10,7 +10,7 @@ services:
   frontend:
     build:
       context: ./url-shortener-frontend
-    image: shorten-url-frontent:latest
+    image: shorten-url-frontend:latest
     ports:
       - 80:80
 

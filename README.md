@@ -14,18 +14,19 @@ a. Submit a shortened URL via form
 b. Get redirected to original URL
 4. Ther User should be able to see a list of previous shortened URLs
 5. BONUS: Front end communicates to backend via REST API
+6. Search box to search for shortened URL and display result in the table
 
 Note:
-The requirements does not require search box for URL table. However, without it, user cannot search for shortened URL.
-Hence, I added search feature allowing users to enter 
+The requirements does not require search feature (6). However, given very long URL summary table, user cannot search for shortened URL.
+Hence, I added search feature allowing users to enter shortURL key (the part after domain) and get the requesting record in the table.
 
 ##Implementation
-This app consists of frontend and backend which is in different code base and highly recommend to them in different environments for security, scalability.
+This app consists of frontend and backend which are in different code bases and highly recommend to deploy them in different servers/environments for security, scalability.
 ### Backend:
 #### Features:
 - Restful API is implemented in API first approach [https://swagger.io/resources/articles/adopting-an-api-first-approach/](https://swagger.io/resources/articles/adopting-an-api-first-approach/)
 - For each request comes, interceptors are implemented to log request and response for debugging, tracing purposes
-- Spring Sleuth is used to assign each step within a request an ID so that we can trace all steps of a request via ```grep``` command in log. 
+- Spring Sleuth is used to assign each step of the request an ID so that we can trace all steps via ```grep``` command in log. 
 - Caffeine cache is implemented for URL read-only operations to improve performance. It is now memory cache. However, if necessary can be replaced by different cache such as AWS elastic cache later
 - API is described via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - App is using Jacoco to create test coverage report
