@@ -1,4 +1,4 @@
-# Bondle shorten url
+# URL shortener
 ## Requirements:
 The user wants a URL shortener application. They should be able to provide a url and get a
 shortened url for it. When a shortened url is provided, the user should be redirected to the
@@ -17,8 +17,8 @@ b. Get redirected to original URL
 6. Search box to search for shortened URL and display result in the table
 
 Note:
-The requirements does not require search feature (6). However, given very long URL summary table, user cannot search for shortened URL.
-Hence, I added search feature allowing users to enter shortURL key (the part after domain) and get the requested record in the table.
+The requirements does not require search feature 6. However, given very long URL summary table, user cannot search for shortened URL.
+Hence, URL search feature is added to allow  users to enter shortURL key (the part after domain) and get the requested record in the table.
 
 ## Implementation
 This app consists of frontend and backend which are in different code bases and highly recommend to deploy them in different servers/environments for security, scalability.
@@ -27,7 +27,7 @@ This app consists of frontend and backend which are in different code bases and 
 - Restful API is implemented in API first approach [https://swagger.io/resources/articles/adopting-an-api-first-approach/](https://swagger.io/resources/articles/adopting-an-api-first-approach/)
 - For each request comes, interceptors are implemented to log request and response for debugging, tracing purposes
 - Spring Sleuth is used to assign every step of the request an ID so that we can trace all steps of a request in different layers via ```grep id``` command in log. 
-- Caffeine cache is implemented for URL read-only operations to improve performance. It is now memory cache. However, if necessary can be replaced by different cache such as AWS elastic cache later
+- Caffeine cache is implemented to improve performance. It is now memory cache. However, if necessary can be replaced by different cache such as distributed AWS elastic cache later
 - API is described via Swagger: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 - Unit test is written and Jacoco is used to measure test coverage report
 
